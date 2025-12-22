@@ -73,6 +73,8 @@ public class Student {
     }
 
     public boolean isPassed() {
-        return calculateAverageScore() >= 60 && hasPassedAllExams();
+        return !exams.isEmpty()
+                && calculateAverageScore() >= 60
+                && hasPassedAllExams();
     }
 }
